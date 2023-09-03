@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.layout {
+		max-width: 68.75rem;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.h1title {
+		font-size: clamp(3rem, calc(1.33rem + 8.33vw), 8rem);
+	}
+	.space-hero-image {
+		margin-top: clamp(2rem, calc(1.17rem + 3.54vw), 4rem);
+		margin-bottom: clamp(4rem, calc(1.72rem + 9.72vw), 9.5rem);
+	}
+}
+
+@layer utilities {
+	@media (prefers-reduced-motion: reduce) {
+		html:focus-within {
+			scroll-behavior: auto;
+		}
+		*,
+		*::before,
+		*::after {
+			-webkit-animation-duration: 0.01ms !important;
+			animation-duration: 0.01ms !important;
+			-webkit-animation-iteration-count: 1 !important;
+			animation-iteration-count: 1 !important;
+			-webkit-transition-duration: 0.01ms !important;
+			-o-transition-duration: 0.01ms !important;
+			transition-duration: 0.01ms !important;
+			scroll-behavior: auto !important;
+		}
+	}
+}

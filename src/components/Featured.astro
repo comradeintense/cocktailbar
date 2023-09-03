@@ -1,0 +1,16 @@
+---
+import { Image } from "astro:assets";
+import cocktails from '../assets/cocktails.png';
+---
+<section>
+  <div class="container flex gap-32">
+    <div class="flex flex-col">
+      <p class="font-semibold text-2xl">Având un început discret, barul nostru s-a impus rapid în <span class="italic">inimile localnicilor</span>, oferindu-le <span class="italic">arome rafinate</span> și o ospitalitate nemărginită.</p>
+      <a href="#" >Citește mai multe</a>
+      <Image src={cocktails} alt="Old fashioned cocktail si Negroni" format="avif" quality="80" loading="lazy" class="w-full" />
+    </div>
+    <div>
+      <p class="font-normal text-2xl">Ne mândrim cu o selecție impresionantă din cele mai rafinate băuturi și servicii.</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+---
+import { Image } from "astro:assets";
+import bar from "../assets/bar.png";
+---
+
+<section class=" mt-4 border-black border-b-2">
+  <div class="container">
+  <h1 class="font-extrabold h1title uppercase leading-none">Ikigai Craft Cocktails</h1>
+  <p class="mt-16 font-semibold max-w-md text-2xl">Descoperă o <span class="italic">călătorie autentică</span> prin universul amestecurilor de cocktailuri.</p>
+  <Image src={bar} alt="Imagine bar Ikigai craft cocktails"  format="avif" quality="80" loading="eager" fetchpriority="high" class="w-full h-auto space-hero-image sm" />
+  </div>
+</section>
