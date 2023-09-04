@@ -1,12 +1,28 @@
 ---
-import { Image } from "astro:assets";
-import bar from "../assets/bar.png";
+import { Image } from 'astro:assets';
+import bar from '../assets/bar.webp';
 ---
 
-<section class=" mt-4 border-black border-b-2">
-  <div class="container">
-  <h1 class="font-extrabold h1title uppercase leading-none">Ikigai Craft Cocktails</h1>
-  <p class="mt-16 font-semibold max-w-md text-2xl">Descoperă o <span class="italic">călătorie autentică</span> prin universul amestecurilor de cocktailuri.</p>
-  <Image src={bar} alt="Imagine bar Ikigai craft cocktails"  format="avif" quality="80" loading="eager" fetchpriority="high" class="w-full h-auto space-hero-image sm" />
-  </div>
+<section class="mt-16 border-black border-b-2">
+	<div class="container">
+		<h1 class="font-extrabold h1title uppercase leading-none">Seijaku Craft Cocktails</h1>
+		<p class="flex items-end mt-8 font-bold">せいじゃく</p>
+		<p class="mt-8 md:mt-9 font-semibold md:max-w-2xl text-paragraph">
+			Pasul tău în Seijaku nu este doar unul într-un simplu bar, ci o călătorie spre liniștea
+			spiritului tău. <span class="italic">Simți?</span> E chemarea unui cocktail artizanal
+			așteptând să te învăluie.
+		</p>
+		<img
+			srcset="/images/bar-625w.webp 625w, 
+                /images/bar-950w.webp 950w, 
+                /images/bar-1275w.webp 1275w, 
+                /images/bar-1250w@2x.webp 1250w, 
+                /images/bar-1900w@2x.webp 1900w, 
+                /images/bar-2550w@2x.webp 2550w"
+			sizes="(min-width: 1440px) 1280px, (min-width: 1200px) 1084px, (min-width: 1000px) 896px, (min-width: 780px) 704px, (min-width: 620px) 532px, calc(93.33vw - 1.75rem)"
+			src="/images/bar.webp"
+			alt="Imagine bar Seijaku interior"
+			class="w-full h-auto mt-8 mb-16 md:mt-14 md:mb-32"
+		/>
+	</div>
 </section>

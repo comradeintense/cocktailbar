@@ -1,0 +1,36 @@
+---
+import { Icon } from 'astro-icon';
+
+interface Props {
+	text: string;
+	href: string;
+	theme: 'primary' | 'secondary' | 'tertiary';
+	icon?: {
+		name: string;
+		side: 'left' | 'right';
+	};
+	classes?: string;
+	[key: string]: any; // This allows any additional properties
+}
+
+const { text, href, theme, icon, classes, ...rest } = Astro.props as Props;
+
+// Map themes to TailwindCSS classes
+const themeClasses = {
+	primary:
+		'rounded-full border-black border-2 text-black p-3 font-semibold text-paragraph hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-yellow-500 active:bg-black inline-flex items-center gap-2 justify-center text-center transition duration-200',
+	secondary:
+		'rounded bg-white px-12 py-3 text-sm font-medium text-accent shadow hover:text-blue-500 hover:bg-gray-100 focus:outline-none focus:ring active:text-accent',
+	tertiary: 'bg-green-500',
+};
+
+const computedThemeClass = themeClasses[theme];
+---
+
+<a href={href} class={`${classes || ''} ${computedThemeClass}`} {...rest}>
+	{icon && icon.side === 'left' && <Icon name={icon.name} height="32" width="32" />}
+
+	{text}
+
+	{icon && icon.side === 'right' && <Icon name={icon.name} height="32" width="32" />}
+</a>

@@ -2,19 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	body {
+		font-family: 'Montserrat', sans-serif;
+	}
+}
+
 @layer components {
-	.layout {
-		max-width: 68.75rem;
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-	}
 	.h1title {
-		font-size: clamp(3rem, calc(1.33rem + 8.33vw), 8rem);
+		font-size: clamp(2.63rem, calc(0.83rem + 8.96vw), 8rem);
 	}
-	.space-hero-image {
-		margin-top: clamp(2rem, calc(1.17rem + 3.54vw), 4rem);
-		margin-bottom: clamp(4rem, calc(1.72rem + 9.72vw), 9.5rem);
+	.text-paragraph {
+		font-size: clamp(1rem, calc(0.88rem + 0.6vw), 1.25rem);
 	}
 }
 

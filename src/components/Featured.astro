@@ -1,16 +1,43 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
 import cocktails from '../assets/cocktails.png';
+import Link from './Link.astro';
 ---
+
 <section>
-  <div class="container flex gap-32">
-    <div class="flex flex-col">
-      <p class="font-semibold text-2xl">Având un început discret, barul nostru s-a impus rapid în <span class="italic">inimile localnicilor</span>, oferindu-le <span class="italic">arome rafinate</span> și o ospitalitate nemărginită.</p>
-      <a href="#" >Citește mai multe</a>
-      <Image src={cocktails} alt="Old fashioned cocktail si Negroni" format="avif" quality="80" loading="lazy" class="w-full" />
-    </div>
-    <div>
-      <p class="font-normal text-2xl">Ne mândrim cu o selecție impresionantă din cele mai rafinate băuturi și servicii.</p>
-    </div>
-  </div>
+	<div class="container grid grid-cols-1 md:grid-cols-2 mt-8 md:mt-20">
+		<div class="flex flex-col">
+			<p class="font-semibold text-paragraph">
+				Seijaku: mai mult decât un bar, un sanctuar pentru gusturi fine și ospitalitate autentică.
+				Lasă zgomotul mental afară și trăiește liniștea cu noi.
+			</p>
+			<div class="mt-8">
+				<Link
+					href="#"
+					theme="primary"
+					text="Explorează"
+					text="Explorează"
+					icon={{
+						name: 'bi:arrow-right-circle',
+						side: 'right',
+					}}
+					classes="uppercase w-full xs:w-auto"
+				/>
+			</div>
+			<Image
+				src={cocktails}
+				alt="Old fashioned cocktail si Negroni"
+				format="avif"
+				quality="80"
+				loading="lazy"
+				class="w-full h-auto mt-16"
+			/>
+		</div>
+		<div>
+			<p class="font-normal text-paragraph mt-8">
+				Fiecare cocktail poartă o poveste, o istorie a gusturilor rafinate și a serviciilor care
+				depășesc așteptările. Vino și lasă-te cucerit de măiestria noastră.
+			</p>
+		</div>
+	</div>
 </section>

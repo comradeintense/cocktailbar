@@ -1,15 +1,16 @@
 ---
-import "../styles/global.css";
-import MainHead from "./MainHead.astro";
-import Navbar from "../components/Navbar.astro";
-const { description = "Umiya Cocktail Bar - Serving chill cocktails since 1993" } = Astro.props;
+import '../styles/global.css';
+import MainHead from './MainHead.astro';
+import Navbar from '../components/Navbar.astro';
+const { description = 'Seijaku Cocktail Bar - Servim cocktailuri relaxante din 2003' } =
+	Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <MainHead {description} />
-  <Navbar />
-  <body class="font-jakarta bg-main-bg">
-    <slot />
-  </body>
+	<MainHead {description} />
+	<Navbar />
+	<body class="bg-main-bg">
+		<slot />
+	</body>
 </html>
