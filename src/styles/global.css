@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-	body {
-		font-family: 'Montserrat', sans-serif;
-	}
-}
-
 @layer components {
 	.h1title {
 		font-size: clamp(2.63rem, calc(0.83rem + 8.96vw), 8rem);

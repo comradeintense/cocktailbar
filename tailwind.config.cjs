@@ -26,6 +26,9 @@ module.exports = {
 				'main-bg': '#F8F8F8',
 				'dark-text': '#1E1E1E',
 			},
+			fontFamily: {
+				sans: ['Montserrat', 'sans-serif'],
+			},
 		},
 	},
 	plugins: [],
