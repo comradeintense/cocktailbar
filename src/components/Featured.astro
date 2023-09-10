@@ -1,16 +1,34 @@
 ---
-import { Image } from 'astro:assets';
-import cocktails from '../assets/cocktails.png';
 import Link from './Link.astro';
 ---
 
-<section>
-	<div class="container grid grid-cols-1 md:grid-cols-2 mt-8 md:mt-20">
+<section class="border-black border-b-2">
+	<div class="container grid grid-cols-1 md:gap-20 md:grid-cols-2 mt-8 md:mt-20 mb-16 md:mb-32">
 		<div class="flex flex-col">
 			<p class="font-semibold text-paragraph">
-				Seijaku: mai mult decât un bar, un sanctuar pentru gusturi fine și ospitalitate autentică.
-				Lasă zgomotul mental afară și trăiește liniștea cu noi.
+				Seijaku nu este un simplu bar, ci un refugiu dedicat cunoscătorilor de cocktailuri. Într-o
+				lume în care zgomotul și graba sunt omniprezente, noi oferim o oază de calm și rafinament.
+				Aici, fiecare cocktail este o călătorie pentru simțuri, o promisiune de măiestrie și
+				pasiune. Lasă zgomotul mental afară și regăsește-te în armonie și liniște, cu un cocktail în
+				mână.
 			</p>
+			<img
+				class="w-full h-auto aspect-[4/3] mt-16 md:mt-8"
+				alt="Interior bar cu canapele si fotolii"
+				src="/uidaily/seijaku/images/interior.png"
+				sizes="(min-width: 1440px) 600px, (min-width: 1200px) 502px, (min-width: 1000px) 408px, (min-width: 780px) 704px, (min-width: 620px) 532px, calc(93.33vw - 28px)"
+				loading="lazy"
+				srcset="/uidaily/seijaku/images/interior-327.webp 327w,
+			/uidaily/seijaku/images/interior-408.webp 408w,
+			/uidaily/seijaku/images/interior-600.webp 600w,
+			/uidaily/seijaku/images/interior-704.webp 704w,
+			/uidaily/seijaku/images/interior-816.webp 816w,
+			/uidaily/seijaku/images/interior-1064.webp 1064w,
+			/uidaily/seijaku/images/interior-1408.webp 1408w,
+
+			"
+			/>
+
 			<div class="mt-8">
 				<Link
 					href="#"
@@ -24,20 +42,23 @@ import Link from './Link.astro';
 					classes="uppercase w-full xs:w-auto"
 				/>
 			</div>
-			<Image
-				src={cocktails}
-				alt="Old fashioned cocktail si Negroni"
-				format="avif"
-				quality="80"
-				loading="lazy"
-				class="w-full h-auto mt-16"
-			/>
 		</div>
 		<div>
-			<p class="font-normal text-paragraph mt-8">
+			<p class="font-normal text-paragraph mt-8 md:mt-0">
 				Fiecare cocktail poartă o poveste, o istorie a gusturilor rafinate și a serviciilor care
 				depășesc așteptările. Vino și lasă-te cucerit de măiestria noastră.
 			</p>
+			<img
+				src="/uidaily/seijaku/images/cocktails.png"
+				alt=" Old fashioned cocktail si Negroni"
+				loading="lazy"
+				class="w-full h-auto aspect-[4/3] mt-8"
+				srcset="/uidaily/seijaku/images/cocktails-600.webp 600w,
+			/uidaily/seijaku/images/cocktails-816.webp 816w,
+			/uidaily/seijaku/images/cocktails-1064.webp 1064w,
+			/uidaily/seijaku/images/cocktails-1408.webp 1408w,"
+			sizes="(min-width: 1440px) 600px, (min-width: 1200px) 502px, (min-width: 1000px) 408px, (min-width: 780px) 704px, (min-width: 620px) 532px, calc(93.33vw - 28px)"
+			/>
 		</div>
 	</div>
 </section>

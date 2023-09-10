@@ -12,8 +12,17 @@
 	.h1title {
 		font-size: clamp(2.63rem, calc(0.83rem + 8.96vw), 8rem);
 	}
+	.footertitle {
+		font-size: clamp(2.19rem, calc(0.78rem + 7.02vw), 6.4rem);
+	}
+	.footertext {
+		font-size: clamp(1.27rem, calc(0.6rem + 3.35vw), 3.28rem);
+	}
 	.text-paragraph {
 		font-size: clamp(1rem, calc(0.88rem + 0.6vw), 1.25rem);
+	}
+	.imagine-footer {
+		height: clamp(23.44rem, calc(11.31rem + 51.72vw), 46.88rem);
 	}
 }
 
